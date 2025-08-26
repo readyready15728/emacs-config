@@ -67,29 +67,38 @@
 
 ;; Everything Else
 
-;; No tilde turds cluttering up the place
-(setq make-backup-files nil)
-;; Auto saves still exist but go into /tmp now
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
-;; Not sure I want to enable auto-fill-mode but this will make M-q effective
-(setq-default fill-column 78)
-;; No beeping
-(setq visible-bell t)
-;; Remember minibuffer history
-(savehist-mode t)
-;; Translucent background so I can see what I'm reading underneath
-(set-frame-parameter nil 'alpha-background 90)
-(add-to-list 'default-frame-alist '(alpha-background . 90))
+;; Turn on line numbers globally
+(global-display-line-numbers-mode t)
+
 ;; Remove clutter from the interface
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+
+;; Remember minibuffer history
+(savehist-mode t)
+
+;; Translucent background so I can see what I'm reading underneath
+(set-frame-parameter nil 'alpha-background 90)
+(add-to-list 'default-frame-alist '(alpha-background . 90))
+
+;; Auto saves still exist but go into /tmp now
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 ;; No splash screen
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
-;; Turn on line numbers globally
-(global-display-line-numbers-mode t)
+
+;; No tilde turds cluttering up the place
+(setq make-backup-files nil)
+
+;; No beeping
+(setq visible-bell t)
+
+;; Not sure I want to enable auto-fill-mode but this will make M-q effective
+(setq-default fill-column 78)
+
 ;; Two space soft indent by default
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
