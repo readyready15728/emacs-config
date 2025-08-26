@@ -60,6 +60,15 @@
   :ensure t
   :bind (("C-x g" . magit-status)))
 
+;; markdown-mode
+(use-package markdown-mode
+  ;; Explanation of how the regular expression below works:
+  ;; https://stackoverflow.com/questions/3494402/setting-auto-mode-alist-in-emacs
+  :mode ("\\.md\\'" . gfm-mode)
+  :init (setq markdown-command "multimarkdown")
+  :bind (:map markdown-mode-map
+         ("C-c C-e" . markdown-do)))
+
 ;; Everything Else
 
 ;; No tilde turds cluttering up the place
