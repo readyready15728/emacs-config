@@ -55,6 +55,11 @@
   :config
   (xclip-mode t))
 
+;; magit, allegedly the best Git client in the (known) universe
+(use-package magit
+  :ensure t
+  :bind (("C-x g" . magit-status)))
+
 ;; Everything Else
 
 ;; No tilde turds cluttering up the place
