@@ -68,8 +68,8 @@
 ;; Remember minibuffer history
 (savehist-mode t)
 ;; Translucent background so I can see what I'm reading underneath
-(set-frame-parameter nil 'alpha-background 80)
-(add-to-list 'default-frame-alist '(alpha-background . 80))
+(set-frame-parameter nil 'alpha-background 90)
+(add-to-list 'default-frame-alist '(alpha-background . 90))
 ;; Remove clutter from the interface
 (menu-bar-mode -1)
 (tool-bar-mode -1)
