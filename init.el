@@ -65,7 +65,7 @@
   ;; Explanation of how the regular expression below works:
   ;; https://stackoverflow.com/questions/3494402/setting-auto-mode-alist-in-emacs
   :mode ("\\.md\\'" . gfm-mode)
-  :init (setq markdown-command "multimarkdown")
+  :init (setq markdown-command '("pandoc" "--from=markdown" "--to=html5"))
   :bind (:map markdown-mode-map
          ("C-c C-e" . markdown-do)))
 
