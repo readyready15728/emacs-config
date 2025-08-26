@@ -30,10 +30,6 @@
 
 ;; use-package Statements
 
-;; (use-package cyberpunk-theme
-;;   :config
-;;   (load-theme 'cyberpunk t))
-
 ;; Establishing doom-laserwave as the color theme along with ancillary
 ;; configuration
 (use-package doom-themes
