@@ -42,15 +42,6 @@
   :config
   (load-theme 'doom-laserwave t))
 
-;; For all those insidious silly parentheses
-(use-package rainbow-delimiters
-  :hook (prog-mode . rainbow-delimiters-mode))
-
-;; Enable system clipboard when in the terminal
-(use-package xclip
-  :config
-  (xclip-mode t))
-
 ;; magit, allegedly the best Git client in the (known) universe
 (use-package magit
   :ensure t
@@ -64,6 +55,15 @@
   :init (setq markdown-command '("pandoc" "--from=markdown" "--to=html5"))
   :bind (:map markdown-mode-map
          ("C-c C-e" . markdown-do)))
+
+;; For all those insidious silly parentheses
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
+
+;; Enable system clipboard when in the terminal
+(use-package xclip
+  :config
+  (xclip-mode t))
 
 ;; Everything Else
 
