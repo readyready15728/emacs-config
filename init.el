@@ -80,3 +80,6 @@
 (setq initial-scratch-message nil)
 ;; Turn on line numbers globally
 (global-display-line-numbers-mode t)
+;; Two space soft indent by default
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
