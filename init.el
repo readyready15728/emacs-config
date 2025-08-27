@@ -30,6 +30,10 @@
 
 ;; use-package Statements
 
+;; C-x o kinda sucks
+(use-package ace-window
+  :bind (("M-o" . ace-window)))
+
 ;; Establishing doom-laserwave as the color theme along with ancillary
 ;; configuration
 (use-package doom-themes
