@@ -48,7 +48,6 @@
 
 ;; magit, allegedly the best Git client in the (known) universe
 (use-package magit
-  :ensure t
   :bind (("C-x g" . magit-status)))
 
 ;; markdown-mode
