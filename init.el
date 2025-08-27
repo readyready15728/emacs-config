@@ -57,7 +57,8 @@
   :mode ("\\.md\\'" . gfm-mode)
   :init (setq markdown-command '("pandoc" "--from=markdown" "--to=html5"))
   :bind (:map markdown-mode-map
-         ("C-c C-e" . markdown-do)))
+              ("C-c C-e" . markdown-do))
+  :hook (markdown-mode . auto-fill-mode))
 
 ;; For all those insidious silly parentheses
 (use-package rainbow-delimiters
