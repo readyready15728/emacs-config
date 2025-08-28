@@ -59,13 +59,17 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
-;; (use-package lsp-mode
-;;   :commands (lsp lsp-deferred)
-;;   :init
-;;   (setq lsp-keymap-prefix "C-c l")
-;;   ;; (lsp-enable-which-key-integration t)
-;;   :hook (;; Replace XXX-mode with concrete major-mode (e.g. python-mode)
-;;          (python-mode . lsp)))
+;; LSP support
+;;
+;; I had a mysterious failure to execute the entire init.el upon turning on
+;; which-key integration
+(use-package lsp-mode
+  :commands (lsp lsp-deferred)
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  ;; (lsp-enable-which-key-integration t)
+  :hook (;; Replace XXX-mode with concrete major-mode (e.g. python-mode)
+         (python-mode . lsp)))
 
 ;; magit, allegedly the best Git client in the (known) universe
 (use-package magit
