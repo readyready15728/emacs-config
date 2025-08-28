@@ -89,9 +89,19 @@
               ("C-c C-e" . markdown-do))
   :hook (markdown-mode . auto-fill-mode))
 
+;; Needed for neotree, should I decide to start using it
+(use-package nerd-icons)
+
 ;; For all those insidious silly parentheses
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
+
+;; "Tree layout file explorer for Emacs"
+(use-package treemacs
+  ;; I had to do the below explicitly for some reason, so that it would work
+  ;; with ace-window
+  :bind (:map global-map
+              ("M-0" . treemacs-select-window)))
 
 ;; Enable system clipboard when in the terminal
 (use-package xclip
