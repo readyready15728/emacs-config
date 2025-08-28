@@ -8,16 +8,16 @@
 
 (setq package-archives
       '(("GNU ELPA" . "https://elpa.gnu.org/packages/")
-	("MELPA" . "https://melpa.org/packages/")
-	("ORG" . "https://orgmode.org/elpa/")
-	("MELPA Stable" . "https://stable.melpa.org/packages/")
-	("nongnu" . "https://elpa.nongnu.org/nongnu/"))
+	      ("MELPA" . "https://melpa.org/packages/")
+	      ("ORG" . "https://orgmode.org/elpa/")
+	      ("MELPA Stable" . "https://stable.melpa.org/packages/")
+	      ("nongnu" . "https://elpa.nongnu.org/nongnu/"))
       package-archive-priorities
       '(("GNU ELPA" . 20)
-	("MELPA" . 15)
-	("ORG" . 10)
-	("MELPA Stable" . 5)
-	("nongnu" . 0)))
+	      ("MELPA" . 15)
+	      ("ORG" . 10)
+	      ("MELPA Stable" . 5)
+	      ("nongnu" . 0)))
 
 (package-initialize)
 
