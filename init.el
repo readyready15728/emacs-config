@@ -34,11 +34,6 @@
 (use-package ace-window
   :bind (("M-o" . ace-window)))
 
-;; IDE-like package for Python in Emacs
-(use-package elpy
-  :init
-  (elpy-enable))
-
 ;; Establishing doom-laserwave as the color theme along with ancillary
 ;; configuration
 (use-package doom-themes
@@ -58,6 +53,11 @@
   (doom-themes-treemacs-config)
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
+
+;; IDE-like package for Python in Emacs
+(use-package elpy
+  :init
+  (elpy-enable))
 
 ;; LSP support
 ;;
