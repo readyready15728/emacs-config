@@ -111,6 +111,9 @@
   :bind (:map global-map
               ("M-0" . treemacs-select-window)))
 
+;; The best terminal emulator for Emacs
+(use-package vterm)
+
 ;; Enable system clipboard when in the terminal
 (use-package xclip
   :config
