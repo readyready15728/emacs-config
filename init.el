@@ -66,14 +66,17 @@
 ;; --debug-init and the *Warnings* buffer, without which diagnosing these
 ;; sorts of things becomes very difficult, and the distinctions between
 ;; different keyword arguments to use-package.
-(use-package lsp-mode
-  :commands (lsp lsp-deferred)
-  :init
-  (setq lsp-keymap-prefix "C-c l")
-  :config
-  (lsp-enable-which-key-integration t)
-  :hook (;; Replace XXX-mode with concrete major-mode (e.g. python-mode)
-         (python-mode . lsp)))
+;;
+;; Even so, for now I will disable lsp-mode and see how far I can go with
+;; more basic packages.
+;; (use-package lsp-mode
+;;   :commands (lsp lsp-deferred)
+;;   :init
+;;   (setq lsp-keymap-prefix "C-c l")
+;;   :config
+;;   (lsp-enable-which-key-integration t)
+;;   :hook (;; Replace XXX-mode with concrete major-mode (e.g. python-mode)
+;;          (python-mode . lsp)))
 
 ;; magit, allegedly the best Git client in the (known) universe
 (use-package magit
