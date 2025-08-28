@@ -59,6 +59,11 @@
   :init
   (elpy-enable))
 
+;; gradle-mode isn't quite working for me...
+;; (use-package gradle-mode
+;;   :hook
+;;   (java-mode . gradle-mode))
+
 ;; LSP support
 ;;
 ;; I had a mysterious failure to execute the entire init.el upon turning on
