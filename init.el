@@ -131,3 +131,6 @@
 ;; Two space soft indent by default
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+
+;; Turn on which-key
+(which-key-mode)
