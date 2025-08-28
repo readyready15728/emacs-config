@@ -62,12 +62,16 @@
 ;; LSP support
 ;;
 ;; I had a mysterious failure to execute the entire init.el upon turning on
-;; which-key integration
+;; which-key integration (appears to be fixed now). The key was learning about
+;; --debug-init and the *Warnings* buffer, without which diagnosing these
+;; sorts of things becomes very difficult, and the distinctions between
+;; different keyword arguments to use-package.
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
   :init
   (setq lsp-keymap-prefix "C-c l")
-  ;; (lsp-enable-which-key-integration t)
+  :config
+  (lsp-enable-which-key-integration t)
   :hook (;; Replace XXX-mode with concrete major-mode (e.g. python-mode)
          (python-mode . lsp)))
 
