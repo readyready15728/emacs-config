@@ -34,6 +34,14 @@
 (use-package ace-window
   :bind (("M-o" . ace-window)))
 
+;; "A polished Dired with batteries included"
+;;
+;; I'm having trouble finding documentation and getting dirvish to
+;; play nice with other windows
+;; (use-package dirvish
+;;   :config
+;;   (dirvish-override-dired-mode))
+
 ;; Establishing doom-laserwave as the color theme along with ancillary
 ;; configuration
 (use-package doom-themes
