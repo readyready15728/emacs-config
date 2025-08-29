@@ -63,6 +63,8 @@
   (doom-themes-org-config))
 
 ;; IDE-like package for Python in Emacs
+;;
+;; Debugging isn't quite working; maybe I can contact the maintainer
 (use-package elpy
   :init
   (elpy-enable))
