@@ -107,6 +107,15 @@
               ("C-c C-e" . markdown-do))
   :hook (markdown-mode . auto-fill-mode))
 
+;; Self-explanatory
+;;
+;; M-x mu-t opens the "dedicated" terminal
+(use-package multi-vterm
+  :init (setq multi-vterm-dedicated-window-height-percent 30)
+  :bind (:map vterm-mode-map
+              ("C-c C-n" . multi-vterm-next)
+              ("C-c C-p" . multi-vterm-prev)))
+
 ;; Needed for neotree, should I decide to start using it
 (use-package nerd-icons)
 
