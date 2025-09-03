@@ -34,6 +34,8 @@
 (use-package ace-window
   :bind (("M-o" . ace-window)))
 
+;; Consider using AuCTeX in the future; don't feel like setting it up now
+
 ;; "A polished Dired with batteries included"
 ;;
 ;; I'm having trouble finding documentation and getting dirvish to
@@ -140,6 +142,10 @@
 
 ;; Everything Else
 
+;; Turn on both line and column numbering in the modline
+(line-number-mode 1)
+(column-number-mode 1)
+
 ;; Turn on line numbers globally
 (global-display-line-numbers-mode t)
 
@@ -147,6 +153,9 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+
+;; Remember location in previously visited files
+(save-place-mode 1)
 
 ;; Remember minibuffer history
 (savehist-mode t)
