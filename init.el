@@ -109,7 +109,7 @@
               ("C-c C-e" . markdown-do))
   :hook (markdown-mode . auto-fill-mode))
 
-;; Self-explanatory
+;; multi-vterm, self-explanatory
 ;;
 ;; M-x mu-t opens the "dedicated" terminal
 (use-package multi-vterm
