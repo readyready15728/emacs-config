@@ -142,6 +142,17 @@
 
 ;; Everything Else
 
+;; Regex incremental search should be the default
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+
+;; hippie-expand is substantially better than dabbrev-expand
+;;
+;; Source: https://www.masteringemacs.org/article/text-expansion-hippie-expand
+(global-set-key (kbd "M-/") 'hippie-expand)
+
 ;; Turn on both line and column numbering in the modline
 (line-number-mode 1)
 (column-number-mode 1)
@@ -164,9 +175,17 @@
 (set-frame-parameter nil 'alpha-background 90)
 (add-to-list 'default-frame-alist '(alpha-background . 90))
 
+;; apropos-do-all enhances the apropos search
+(setq apropos-do-all t)
+
 ;; Auto saves still exist but go into /tmp now
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
+
+;; Case doesn't matter for various types of completion
+(setq completion-ignore-case t
+      read-file-name-completion-ignore-case t
+      read-buffer-completion-ignore-case t)
 
 ;; No splash screen
 (setq inhibit-startup-message t)
@@ -174,6 +193,10 @@
 
 ;; No tilde turds cluttering up the place
 (setq make-backup-files nil)
+
+;; Saves exiting clipboard text into kill ring before replacing it, which can
+;; be retrieved with C-y M-y ... uh, just in case
+(setq save-interprogram-paste-before-kill t)
 
 ;; No beeping
 (setq visible-bell t)
@@ -184,6 +207,9 @@
 ;; Two space soft indent by default
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+
+;; Should be on by default but what the hell I'll make sure
+(show-paren-mode 1)
 
 ;; Turn on which-key
 (which-key-mode)
