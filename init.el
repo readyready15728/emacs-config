@@ -188,8 +188,8 @@
       read-buffer-completion-ignore-case t)
 
 ;; No splash screen
-(setq inhibit-startup-message t)
-(setq initial-scratch-message nil)
+(setq inhibit-startup-message t
+      initial-scratch-message nil)
 
 ;; No tilde turds cluttering up the place
 (setq make-backup-files nil)
@@ -205,8 +205,8 @@
 (setq-default fill-column 78)
 
 ;; Two space soft indent by default
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
+(setq-default indent-tabs-mode nil
+              tab-width 2)
 
 ;; Should be on by default but what the hell I'll make sure
 (show-paren-mode 1)
