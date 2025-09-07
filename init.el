@@ -3,7 +3,6 @@
 ;; use-package Setup
 ;; Stolen from: https://ianyepan.github.io/posts/setting-up-use-package/
 ;; And from: https://sophiebos.io/posts/first-emacs-config/
-
 (require 'package)
 
 (setq package-archives
