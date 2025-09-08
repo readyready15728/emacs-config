@@ -68,7 +68,9 @@
 ;; Debugging isn't quite working; maybe I can contact the maintainer
 (use-package elpy
   :init
-  (elpy-enable))
+  (elpy-enable)
+  :config
+  (setq elpy-shell-starting-directory 'current-directory))
 
 ;; Advertised as "modern on-the-fly syntax checking extension for GNU Emacs"
 (use-package flycheck
