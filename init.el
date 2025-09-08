@@ -63,14 +63,14 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
-;; IDE-like package for Python in Emacs
-;;
-;; Debugging isn't quite working; maybe I can contact the maintainer
-(use-package elpy
-  :init
-  (elpy-enable)
+;; Emacs' built-in lightweight LSP client
+(use-package eglot
+  :defer t
   :config
-  (setq elpy-shell-starting-directory 'current-directory))
+  (add-to-list 'eglot-server-programs
+		           '(python-mode . ("pyright-langserver" "--stdio")))
+  :hook
+  ((python-mode . eglot-ensure)))
 
 ;; Advertised as "modern on-the-fly syntax checking extension for GNU Emacs"
 (use-package flycheck
