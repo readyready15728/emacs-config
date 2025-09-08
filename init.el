@@ -70,7 +70,7 @@
   (add-to-list 'eglot-server-programs
 		           '(python-mode . ("pyright-langserver" "--stdio")))
   :hook
-  ((python-mode . eglot-ensure)))
+  ((prog-mode . eglot-ensure)))
 
 ;; Advertised as "modern on-the-fly syntax checking extension for GNU Emacs"
 ;; (use-package flycheck
