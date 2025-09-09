@@ -72,12 +72,6 @@
   :hook
   ((prog-mode . eglot-ensure)))
 
-;; Advertised as "modern on-the-fly syntax checking extension for GNU Emacs"
-;; (use-package flycheck
-;;   :ensure t
-;;   :config
-;;   (add-hook 'after-init-hook 'global-flycheck-mode))
-
 ;; gradle-mode isn't quite working for me...
 ;; (use-package gradle-mode
 ;;   :hook
