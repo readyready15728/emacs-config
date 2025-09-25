@@ -123,6 +123,13 @@
   :config
   (xclip-mode t))
 
+;; "Fixed and automatic balanced window layout for Emacs"
+(use-package zoom
+  :config
+  (zoom-mode t)
+  ;; The README.md suggested this in case completions buffer appears too small
+  (temp-buffer-resize-mode t))
+
 ;; Everything Else
 
 ;; Regex incremental search should be the default
