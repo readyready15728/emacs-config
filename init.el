@@ -170,6 +170,9 @@
       read-file-name-completion-ignore-case t
       read-buffer-completion-ignore-case t)
 
+;; I can figure this out on my own and don't need Emacs' help
+(setq custom-file null-device)
+
 ;; No splash screen
 (setq inhibit-startup-message t
       initial-scratch-message nil)
