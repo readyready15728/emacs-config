@@ -44,6 +44,14 @@
 ;;   :config
 ;;   (dirvish-override-dired-mode))
 
+(use-package company
+  :hook (prog-mode . company-mode)
+  ;; :bind (:map company-active-map
+  ;;       ("<tab>" . company-complete-selection))
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.0))
+
 ;; Establishing doom-laserwave as the color theme along with ancillary
 ;; configuration
 (use-package doom-themes
