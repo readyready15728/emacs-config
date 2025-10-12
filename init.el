@@ -140,6 +140,9 @@
 
 ;; Everything Else
 
+;; Maximize Emacs frame at the start
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+
 ;; Regex incremental search should be the default
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
