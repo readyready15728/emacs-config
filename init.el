@@ -44,6 +44,9 @@
 ;;   :config
 ;;   (dirvish-override-dired-mode))
 
+;; Better completion with company
+;;
+;; Stolen from: https://systemcrafters.net/emacs-from-scratch/build-your-own-ide-with-lsp-mode/
 (use-package company
   :hook (prog-mode . company-mode)
   :bind (:map company-active-map
